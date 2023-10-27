@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { generateColor } from 'components/random-color';
 import {StatisticSection, StatsList, StatsItem, Title, Label, Percentage} from "./Statistics.styled"
 
 export const Statistics = ({title, stats }) => {
@@ -7,8 +8,8 @@ export const Statistics = ({title, stats }) => {
             {title && (<Title>{title}</Title>)}
             <StatsList>
 {stats.map(item => (<StatsItem key={item.id} style={{backgroundColor: generateColor() }}>
-                    <Label className="label">{item.label} </Label>
-                    <Percentage className="percentage">{`${item.percentage} %`}</Percentage>
+                    <Label>{item.label} </Label>
+                    <Percentage>{`${item.percentage} %`}</Percentage>
     </StatsItem>) )} 
   </StatsList>
 </StatisticSection>
@@ -30,6 +31,3 @@ Statistics.propTypes = {
 
 
 
-function generateColor() {
-  return '#' + Math.floor(Math.random()*16777215).toString(16)
-}
