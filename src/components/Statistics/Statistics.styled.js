@@ -1,30 +1,30 @@
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 export const StatisticSection = styled.section`
+background-color: ${p => {
+    return p.theme.colors.white;
+}}; 
 width: 250px;
 margin: 20px auto;
-
-background-color:rgb(245,245,245);
 border-radius:8px; 
 `
 
 export const Title = styled.h2`
-color: gray;
+color:  ${p => {
+    return p.theme.colors.gray;
+}};
 font-size: 16px;
 font-weight: 700;
 text-transform: uppercase;
 line-height: 1.125;
-margin: 0;
 margin-bottom: 12px;
+padding-top: 15px;
 text-align:center` 
 
 export const StatsList = styled.ul`
-padding: 0;
 display:flex;
 text-align: center;
-width: 250px;
 height: 40px;
-margin: 0;
 border-radius: 8px; 
 overflow: hidden;
 `
@@ -34,7 +34,6 @@ display:flex;
 justify-content: center;
 flex-direction:column;
 width: 50px;
-height: 40px;
 gap:5px;
 color: white;
 `

@@ -1,40 +1,45 @@
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 
 
 export const UserDescription = styled.div`
+background-color:  ${p => {
+    return p.theme.colors.white;
+}}; 
 margin: 40px auto;
 text-align: center;
 width: 200px;
-height: 250px;
+height: 288px;
 padding-top: 50px;
 border: 1px solid silver;
 border-radius: 8px;
 `
 
+
+export const Avatar = styled.img`
+margin: 0 auto`
+
 export const UserName = styled.p`
-color: #111;
-font-size: 16px;
+color:${p => {
+    return p.theme.colors.black;
+}};
 font-weight: 700;
-line-height: 1.125;
 margin-top: 10px;
-margin-bottom: 0;
 `
 
 export const UserInfo = styled.p`
 color: gray;
-font-size: 14px;
+font-size: 12px;
 margin-top: 10px;
-margin-bottom: 0;
 `
 
 export const StatsList = styled.ul`
 display:flex;
 justify-content: space-between;
 height: 60px;
-margin-top: 48px;
-margin-bottom:0;
-padding: 0;
-background-color: lightsteelblue;
+margin-top: 40px;
+background-color:  ${p => {
+    return p.theme.colors.lightsteelblue;
+}};
 border-radius:  0 0 8px 8px; 
 overflow: hidden;
 `
@@ -48,7 +53,9 @@ width: 100%;
 height:100%;`
 
 export const StatsNumbers = styled.span`
-color: #111;
+color:${p => {
+    return p.theme.colors.black;
+}};
 font-size: 14px;
 font-weight: 500;
 `
